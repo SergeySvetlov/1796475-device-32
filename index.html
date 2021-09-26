@@ -10,7 +10,7 @@
       <nav class="navegation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <form>
+            <form class="search-bar" name="search-bar">
               <label>
                 <button type="submit"></button>
                 <input type="search" placeholder="Поиск по сайту" />
@@ -29,55 +29,57 @@
             <a class="navigation-link" href="#">Корзина</a>
           </li>
         </ul>
-        <p class="navigation-list navigation-user">
-          <h2 class="navigation-item-bottom"><a href="catalog.html">Каталог товаров</a></h2>
-          <h2 class="navigation-item-bottom"><a href="#">Доставка</a></h2>
-          <h2 class="navigation-item-bottom"><a href="#">Гарантия</a></h2>
-          <h2 class="navigation-item-bottom"><a href="#">Контакты</a></h2>
-        </p>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item-bottom"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation-item-bottom"><a href="#">Доставка</a></li>
+          <li class="navigation-item-bottom"><a href="#">Гарантия</a></li>
+          <li class="navigation-item-bottom"><a href="#">Контакты</a></li>
+        </ul>
       </nav>
     </header>
-    <main>
+    <main class="main-index">
       <h1 class="visually-hidden">Магазин Девайс</h1>
       <section class="main-products">
         <h2 class="visually-hidden">Главные товары</h2>
-        <img class="slider-image" src="" alt="Товар" />
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <h3 class="subtitle">
-          Порхает как бабочка, жалит как пчела!
-        </h3>
-        <p class="description">
-          Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-        </p>
-        <a class="details" href="#">Подробнее</a>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">Товар номер 1</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Товар номер 2</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Товар номер 3</span>
-            </button>
-          </li>
-        </ol>
-        <dl class="specifications">
-          <dt class="value">800 м</dt>
+        <div class="slider">
+          <img class="slider-image" src="" alt="Товар" />
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+          <h3 class="subtitle">
+            Порхает как бабочка, жалит как пчела!
+          </h3>
+          <p class="description">
+            Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <a class="details" href="#">Подробнее</a>
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">Товар номер 1</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">Товар номер 2</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">Товар номер 3</span>
+              </button>
+            </li>
+          </ol>
+          <dl class="specifications">
+            <dt class="value">800 м</dt>
             <dd class="parameter">Дальность полета</dd>
-          <dt class="value">50 м</dt>
+            <dt class="value">50 м</dt>
             <dd class="parameter">Радиус поражения</dd>
-        </dl>
+          </dl>
+        </div>
       </section>
       <section class="product-categories">
         <h2 class="visually-hidden">Категории товаров</h2>
@@ -135,9 +137,9 @@
       <section class="conditions">
         <h2 class="visually-hidden">Условия работы</h2>
         <div class="tab">
-          <button class="tablinks" onclick="">Доставка</button>
-          <button class="tablinks" onclick="">Гарантия</button>
-          <button class="tablinks" onclick="">Кредит</button>
+          <a class="tablinks" href="#">Доставка</a>
+          <a class="tablinks" href="#">Гарантия</a>
+          <a class="tablinks" href="#">Кредит</a>
         </div>
         <div id="delivery" class="tabcontent">
           <h3 class="subtitle">Доставка</h3>
@@ -188,7 +190,8 @@
         <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <h4 class="contacts-subtitle">Время работы</h4>
         <ul class="contacts-schedule">
-          <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+          <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
+          <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
         <a class="details" href="#">Напишите нам</a>
       </section>
@@ -213,7 +216,7 @@
       </section>
     </main>
     <footer>
-      <img class="logo2" src="" alt="Логотип магазина Девайс" />
+      <img class="logo-yellow" src="" alt="Логотип магазина Девайс" />
       <p class="text-footer">
         Санкт-Петербург, набережная реки Карповки, 5, литера П.
       </p>
