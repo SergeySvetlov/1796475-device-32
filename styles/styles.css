@@ -1,3 +1,262 @@
-﻿body
-{
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
 }
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+}
+.visually-hidden {
+  visibility: hidden;
+}
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 18pt;
+  font-weight: 400;
+  line-height: 30pt;
+  color: #444444;
+  width: 1440px;
+}
+.navegation {
+  background-color: #ffe17f;
+  width:1160px;
+  height:300px;
+}
+li {
+  list-style-type: none;
+}
+.navigation-link {
+  font-size: 16pt;
+  color: #000000;
+  text-decoration: none;
+}
+.navigation-item-bottom a {
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.subtitle {
+  font-family: Raleway, sans-serif;
+  font-size: 50pt;
+  line-height: 50pt;
+  color: #000000;
+}
+.details {
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.value {
+  font-family: Rubik, sans-serif;
+  font-size: 36pt;
+  font-weight: 400;
+  line-height: 30pt;
+  color: #000000;
+}
+.category-item-link {
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+  line-height: 24pt;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+li.category-item:nth-child(1) {
+  background-image: url(../img/decor/virtual_reality.svg);
+  background-repeat: no-repeat;
+  height: 253px;
+  width: 160px;
+}
+li.category-item:nth-child(2) {
+  background-image: url(../img/decor/monopods.svg);
+  background-repeat: no-repeat;
+  height: 253px;
+  width: 160px;
+}
+li.category-item:nth-child(3) {
+  background-image: url(../img/decor/action_camera.svg);
+  background-repeat: no-repeat;
+  height: 253px;
+  width: 160px;
+}
+li.category-item:nth-child(4) {
+  background-image: url(../img/decor/fitness_bracelet.svg);
+  background-repeat: no-repeat;
+  height: 253px;
+  width: 160px;
+}
+li.category-item:nth-child(5) {
+  background-image: url(../img/decor/smart_watch.svg);
+  background-repeat: no-repeat;
+  height: 253px;
+  width: 160px;
+}
+li.category-item:nth-child(6) {
+  background-image: url(../img/decor/quadcopters.svg);
+  background-repeat: no-repeat;
+  height: 253px;
+  width: 160px;
+}
+.tablinks {
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.rare-order {
+  background-image: url(../img/decor/delivery_rare.svg);
+  background-repeat: no-repeat;
+  background-color: #ebebeb;
+  height: 100px;
+  width: 1160px;
+  text-align: center;
+  vertical-align: central;
+}
+.order-link {
+  font-family: Raleway, sans-serif;
+  font-size: 20pt;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+.transport-company-item {
+  list-style-type: disc;
+  color: #ffc700;
+}
+.transport-company-item span {
+  color: #000000;
+  font-family: Rubik, sans-serif;
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 20pt;
+  color: #000000;
+}
+.contacts-subtitle {
+  font-family: Rubik, sans-serif;
+  font-size: 24pt;
+  font-weight: 700;
+  line-height: 30pt;
+  color: #444444;
+}
+.contacts-phone {
+  color: #444444;
+}
+.mail {
+  background-color: #ebebeb;
+}
+.button {
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+footer {
+  background-color: #444444;
+  color: white;
+  font-size: 16pt;
+}
+.info-list-item a{
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.contacts-phone {
+  color: white;
+  font-size: 16pt;
+  line-height: 30pt;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.breadcrumbs-link {
+  list-style-type: none;
+  color: #444444;
+  font-size: 16pt;
+  text-decoration: none;
+}
+.subtitle-catalog {
+  background-color: #dcdcdc;
+  font-family: Raleway, sans-serif;
+  font-size: 16pt;
+  color: #000000;
+  letter-spacing: 0.2em;
+}
+.catalog-filter {
+  background-color: #ebebeb;
+}
+.catalog-filter-title {
+  color: #000000;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 20pt;
+}
+.control-label {
+  color: #000000;
+  font-size: 16pt;
+}
+.select-control {
+  color: #000000;
+  font-size: 16pt;
+}
+.product-card-link {
+  text-decoration: none;
+}
+.product-card-title {
+  color: #000000;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 24pt;
+}
+.product-card-price {
+  color: #444444;
+  font-weight: 400;
+}
+.pagination-link {
+  font-family: Raleway, sans-serif;
+  font-size: 16pt;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.catalog-sorting {
+  background-color: #ebebeb;
+}
+.pagination {
+  background-color: #ebebeb;
+}
+
