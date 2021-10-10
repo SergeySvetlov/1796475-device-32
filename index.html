@@ -7,79 +7,87 @@
 </head>
   <body>
     <header class="page-header">
-      <img class="logo" src="img/icons/device_logo_black.svg" alt="Логотип магазина Девайс" width="145" height="36"/>
+      <a class="logo" href="index.html"><img src="img/icons/device_logo_black.svg" alt="Логотип магазина Девайс" width="145" height="36" /></a>
       <nav class="navegation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <form class="search-bar" name="search-bar">
-              <label>
-                <button type="submit"></button>
-                <input type="search" placeholder="Поиск по сайту" />
-              </label>
-            </form>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Войти</a>
-          </li>
-        </ul>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Корзина</a>
-          </li>
-        </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item-bottom"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="navigation-item-bottom"><a href="#">Доставка</a></li>
-          <li class="navigation-item-bottom"><a href="#">Гарантия</a></li>
-          <li class="navigation-item-bottom"><a href="#">Контакты</a></li>
-        </ul>
+        <div class="navigation-top">
+          <ul class="navigation-list navigation-">
+            <li class="navigation-item">
+              <form class="search-bar" name="search-bar">
+                <label>
+                  <button type="submit"></button>
+                  <input type="search" placeholder="Поиск по сайту" />
+                </label>
+              </form>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Войти</a>
+            </li>
+          </ul>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navigation-bottom">
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-item-bottom"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="navigation-item-bottom"><a href="#">Доставка</a></li>
+            <li class="navigation-item-bottom"><a href="#">Гарантия</a></li>
+            <li class="navigation-item-bottom"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-container main-index">
       <h1 class="visually-hidden">Магазин Девайс</h1>
       <section class="main-products">
         <h2 class="visually-hidden">Главные товары</h2>
-        <div class="slider">
-          <img class="slider-image" src="img/content/slider_one.png" alt="Товар" width="560" height="560"/>
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </button>
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Следующее фото</span>
-          </button>
-          <h3 class="subtitle">
-            Порхает как бабочка, жалит как пчела!
-          </h3>
-          <p class="description">
-            Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-          </p>
-          <a class="details" href="#">Подробнее</a>
-          <ol class="slider-pagination">
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                <span class="visually-hidden">Товар номер 1</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">Товар номер 2</span>
-              </button>
-            </li>
-            <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">Товар номер 3</span>
-              </button>
-            </li>
-          </ol>
-          <dl class="specifications">
-            <dt class="value">800 м</dt>
-            <dd class="parameter">Дальность полета</dd>
-            <dt class="value">50 м</dt>
-            <dd class="parameter">Радиус поражения</dd>
-          </dl>
+        <div class="main-products-slider">
+          <div class="slider">
+            <img class="slider-image" src="img/content/slider_one.png" alt="Товар" width="560" height="560" />
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
+          <div class="slider">
+            <h3 class="subtitle">
+              Порхает как бабочка, жалит как пчела!
+            </h3>
+            <p class="description">
+              Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+            </p>
+            <a class="details" href="#">Подробнее</a>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">Товар номер 1</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Товар номер 2</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Товар номер 3</span>
+                </button>
+              </li>
+            </ol>
+            <dl class="specifications">
+              <dt class="value">800 м</dt>
+              <dd class="parameter">Дальность полета</dd>
+              <dt class="value">50 м</dt>
+              <dd class="parameter">Радиус поражения</dd>
+            </dl>
+          </div>
         </div>
       </section>
       <section class="product-categories">
@@ -134,97 +142,108 @@
       <section class="rare-order">
         <a class="order-link" href="#">Доставим редкий товар под заказ</a>
       </section>
-      <section class="info">
-        <h3 class="subtitle">О нас</h3>
-        <p class="text">
-          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-        </p>
-        <p class="text">
-          Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
-        </p>
-        <ul class="transport-company">
-          <li class="transport-company-item"><span>Меловые линии</span></li>
-          <li class="transport-company-item"><span>СДИК</span></li>
-          <li class="transport-company-item"><span>ТоксБерри</span></li>
-        </ul>
-        <a class="details" href="#">Подробнее о нас</a>
-      </section>
-      <section class="contacts">
-        <h3 class="subtitle">Контакты</h3>
-        <p class="text">
-          Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки.
-        </p>
-        <h4 class="contacts-subtitle">Интернет-магазин «Девайс»</h4>
-        <p class="text">
-          Санкт-Петербург, набережная реки Карповки, 5, литера П.
-        </p>
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <h4 class="contacts-subtitle">Время работы</h4>
-        <ul class="contacts-schedule">
-          <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
-          <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
-        </ul>
-        <a class="details" href="#">Напишите нам</a>
-      </section>
-      <section class="mail">
+      <div class="info-contacts">
+        <section class="info">
+          <h3 class="subtitle">О нас</h3>
+          <p class="text">
+            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+          </p>
+          <p class="text">
+            Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
+          </p>
+          <ul class="transport-company">
+            <li class="transport-company-item"><span>Меловые линии</span></li>
+            <li class="transport-company-item"><span>СДИК</span></li>
+            <li class="transport-company-item"><span>ТоксБерри</span></li>
+          </ul>
+          <a class="details" href="#">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+          <h3 class="subtitle">Контакты</h3>
+          <p class="text">
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки.
+          </p>
+          <h4 class="contacts-subtitle">Интернет-магазин «Девайс»</h4>
+          <p class="text">
+            Санкт-Петербург, набережная реки Карповки, 5, литера П.
+          </p>
+          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <h4 class="contacts-subtitle">Время работы</h4>
+          <ul class="contacts-schedule">
+            <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
+            <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+          </ul>
+          <a class="details" href="#">Напишите нам</a>
+        </section>
+      </div>
+    </main>
+    <footer class="mail">
+      <div class="mail-container">
         <h3 class="subtitle">
-          Подпишитесь на рассылку
+            Подпишитесь на рассылку
         </h3>
         <p class="text">
-          Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
+            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
         </p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="newsletter-email">
             <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           </p>
           <button class="button newsletter-button" type="submit">
-            Подписаться
+              Подписаться
           </button>
         </form>
         <p class="text">
-          Это бесплатно
+            Это бесплатно
         </p>
-      </section>
-    </main>
-    <footer>
-      <img class="logo-yellow" src="img/icons/device_logo_yellow.svg" alt="Логотип магазина Девайс" width="145" height="36" />
-      <p class="text-footer">
-        Санкт-Петербург, набережная реки Карповки, 5, литера П.
-      </p>
-      <ul class="info-list">
-        <li class="info-list-item">
-          <a href="">ДОСТАВКА</a>
-        </li>
-        <li class="info-list-item">
-          <a href="">ГАРАНТИЯ</a>
-        </li>
-        <li class="info-list-item">
-          <a href="">КОНТАКТЫ</a>
-        </li>
-      </ul>
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a class="fb" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="insta" href="#">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="tw" href="#">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
-        </li>
-      </ul>
-      <p>
-        Тел.:<a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </p>
-      <p class="about-text">
-        <span class="visually-hidden">Сделано в</span> <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="img/icons/htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="34" /></a>
-      </p>
+      </div>
     </footer>
+    <footer class="page-footer">
+      <div class="page-footer-container">
+        <div class="footer-left-section">
+          <img class="logo-yellow" src="img/icons/device_logo_yellow.svg" alt="Логотип магазина Девайс" width="145" height="36" />
+          <p class="text-footer">
+            Санкт-Петербург, набережная реки Карповки, 5, литера П.
+          </p>
+        </div>
+        <div class="footer-center-section">
+          <ul class="info-list">
+            <li class="info-list-item">
+              <a href="">ДОСТАВКА</a>
+            </li>
+            <li class="info-list-item">
+              <a href="">ГАРАНТИЯ</a>
+            </li>
+            <li class="info-list-item">
+              <a href="">КОНТАКТЫ</a>
+            </li>
+          </ul>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="fb" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="insta" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="tw" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right-section">
+          <p>
+            Тел.:<a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </p>
+          <p class="about-text">
+            <span class="visually-hidden">Сделано в</span> <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="img/icons/htmlacademy.svg" alt="Логотип HTML Academy" width="115" height="34" /></a>
+          </p>
+        </div>
+      </footer>
   </body>
 </html>
