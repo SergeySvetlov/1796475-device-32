@@ -26,14 +26,12 @@
   src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
   font-display: swap;
 }
-.visually-hidden {
-  visibility: hidden;
-}
 html {
   height: 100%;
 }
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -43,6 +41,19 @@ body {
   font-weight: 400;
   line-height: 30px;
   color: #444444;
+}
+li {
+  list-style-type: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .main-container {
   flex-grow: 1;
@@ -64,25 +75,43 @@ body {
   flex-direction: column;
   margin: 0 auto;
 }
-.navigation-top {
-  width: 1041px;
-  margin-left: 60px;
-}
-.navigation-bottom {
-  width: 1041px;
-  margin-left: 60px;
-}
 .navigation-list {
   margin: 0;
   padding: 0;
 }
-
-.main-index {
-  width: 1160px;
-  margin: 0 auto;
+.navigation-top {
+  width: 1075px;
+  margin-left: 60px;
+  margin-top: 49px;
+  display: flex;
+  justify-content: space-between;
 }
-li {
-  list-style-type: none;
+.search-bar {
+  box-sizing: border-box;
+  width: 516px;
+  height: 40px;
+  padding: 10px;
+}
+.entrance {
+  display: block;
+  box-sizing: border-box;
+  width: 117px;
+  height: 40px;
+  padding: 10px;
+}
+.compare {
+  display: block;
+  box-sizing: border-box;
+  width: 136px;
+  height: 40px;
+  padding: 10px;
+}
+.basket {
+  display: block;
+  box-sizing: border-box;
+  width: 131px;
+  height: 40px;
+  padding: 10px;
 }
 .navigation-link {
   font-size: 16px;
@@ -90,7 +119,15 @@ li {
   color: #000000;
   text-decoration: none;
 }
+.navigation-bottom {
+  width: 1041px;
+  margin-left: 60px;
+  margin-top: 20px;
+  display: flex;
+}
 .navigation-item-bottom a {
+  display: block;
+  padding: 14px 20px 15px 20px;
   font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -100,6 +137,11 @@ li {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.main-index {
+  width: 1160px;
+  margin: 0 auto;
 }
 .main-products-slider {
   display: flex;
@@ -277,28 +319,47 @@ li.category-item:nth-child(6) {
 }
 .page-footer {
   background-color: #444444;
-  color: white;
 }
 .page-footer-container {
   width: 1160px;
   margin: 0 auto;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
+  color: white;
 }
 .footer-left-section {
-  width: 238px;
+  flex-basis: 240px;
+  margin: 0;
+  padding: 0;
 }
-.footer-center-section {
-  width: 458px;
+.logo-yellow {
+  margin-top: 62px;
 }
-.footer-right-section {
-  width: 293px;
-}
-.page-footer-container .text-footer {
+.text-footer {
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
   font-size: 16px;
   line-height: 19px;
 }
-.page-footer-container .info-list-item a {
+.footer-center-section {
+  flex-basis: 495px;
+  margin: 0;
+  padding: 0;
+}
+.info-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-top: 123px;
+}
+.footer-center-section .info-list-item a {
+  display: block;
+  width: 125px;
+  height: 21px;
+  padding: 14px 20px 15px 20px;
   font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -309,11 +370,54 @@ li.category-item:nth-child(6) {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-.page-footer-container .contacts-phone {
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 62px;
+}
+.footer-social-item a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 7px;
+  background-color: RGBA(255,255,255,0.3);
+  border-radius: 50%;
+  background-image: url(../img/icons/facebook.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer-right-section {
+  flex-basis: 240px;
+  margin: 0;
+  padding: 0;
+
+}
+.footer-right-section .contacts-phone {
+  display: block;
+  width: 174px;
+  height: 19px;
+  margin-left: auto;
+  margin-top: 133px;
+  padding: 3px 15px 5px 15px;
   color: white;
   font-size: 16px;
   text-decoration: none;
-  text-transform: uppercase;
+}
+.about-text {
+  margin: 0;
+  padding: 0;
+  margin-top: 63px;
+}
+.htmlacademy-link {
+  display: block;
+  width: 115px;
+  height: 33px;
+  padding: 10px;
+  margin-left: auto;
+  margin-top: 63px;
 }
 .inner-header {
   width: 1160px;
