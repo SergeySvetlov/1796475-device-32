@@ -9,30 +9,30 @@
     <header class="page-header">
       <a class="logo" href="index.html"><img src="img/icons/device_logo_black.svg" alt="Логотип магазина Девайс" width="145" height="36" /></a>
       <nav class="navegation">
-        <ul class="navigation-list navigation-top">
-          <li class="navigation-item">
-            <form class="search-bar" name="search-bar">
-              <label>
-                <button type="submit"></button>
-                <input type="search" placeholder="Поиск по сайту" />
-              </label>
-            </form>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link entrance" href="#">Войти</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link compare" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link basket" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="navigation-top">
+          <form class="search-bar" name="search-bar">
+            <label>
+              <button type="submit"></button>
+              <input type="search" placeholder="Поиск по сайту" />
+            </label>
+          </form>
+          <ul class="navigation-list">
+            <li class="navigation-item-entrance">
+              <a class="navigation-link entrance" href="#">Войти</a>
+            </li>
+            <li class="navigation-item-compare">
+              <a class="navigation-link compare" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-item-basket">
+              <a class="navigation-link basket" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <ul class="navigation-list navigation-bottom">
-          <li class="navigation-item-bottom"><a class="catalog" href="catalog.html">Каталог товаров</a></li>
-          <li class="navigation-item-bottom"><a class="delivery" href="#">Доставка</a></li>
-          <li class="navigation-item-bottom"><a class="warranty" href="#">Гарантия</a></li>
-          <li class="navigation-item-bottom"><a class="contacts" href="#">Контакты</a></li>
+          <li class="navigation-item-bottom catalog-bottom"><a class="" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation-item-bottom "><a href="#">Доставка</a></li>
+          <li class="navigation-item-bottom"><a href="#">Гарантия</a></li>
+          <li class="navigation-item-bottom contacts-bottom"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -41,16 +41,16 @@
       <section class="main-products">
         <h2 class="visually-hidden">Главные товары</h2>
         <div class="main-products-slider">
-          <div class="slider">
-            <img class="slider-image" src="img/content/slider_one.png" alt="Товар" width="560" height="560" />
+          <div class="slider-left">
             <button class="slider-button slider-prev" type="button">
               <span class="visually-hidden">Предыдущее фото</span>
             </button>
+            <img class="slider-image" src="img/content/slider_one.png" alt="Товар" width="460" height="460" />
             <button class="slider-button slider-next" type="button">
               <span class="visually-hidden">Следующее фото</span>
             </button>
           </div>
-          <div class="slider">
+          <div class="slider-right">
             <h3 class="subtitle">
               Порхает как бабочка, жалит как пчела!
             </h3>
@@ -78,6 +78,8 @@
             <dl class="specifications">
               <dt class="value">800 м</dt>
               <dd class="parameter">Дальность полета</dd>
+            </dl>
+            <dl class="specifications">
               <dt class="value">50 м</dt>
               <dd class="parameter">Радиус поражения</dd>
             </dl>
@@ -108,36 +110,38 @@
         </ul>
       </section>
       <section class="conditions">
-        <h2 class="visually-hidden">Условия работы</h2>
-        <div class="tab">
-          <a class="tablinks" href="#">Доставка</a>
-          <a class="tablinks" href="#">Гарантия</a>
-          <a class="tablinks" href="#">Кредит</a>
-        </div>
-        <div id="delivery" class="tabcontent">
-          <h3 class="subtitle">Доставка</h3>
-          <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-          </p>
-        </div>
-        <div id="warranty" class="tabcontent">
-          <h3 class="subtitle">Гарантия</h3>
-          <p>
-            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-          </p>
-        </div>
-        <div id="credit" class="tabcontent">
-          <h3 class="subtitle">Кредит</h3>
-          <p>
-            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
-          </p>
+        <div class="condition-container">
+          <h2 class="visually-hidden">Условия работы</h2>
+          <div class="tab">
+            <a class="tablinks" href="#">Доставка</a>
+            <a class="tablinks" href="#">Гарантия</a>
+            <a class="tablinks" href="#">Кредит</a>
+          </div>
+          <div id="delivery" class="tabcontent delivery">
+            <h3 class="subtitle">Доставка</h3>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </div>
+          <div id="warranty" class="tabcontent visually-hidden warranty">
+            <h3 class="subtitle">Гарантия</h3>
+            <p>
+              Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+            </p>
+          </div>
+          <div id="credit" class="tabcontent visually-hidden credit ">
+            <h3 class="subtitle">Кредит</h3>
+            <p>
+              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
+            </p>
+          </div>
         </div>
       </section>
       <section class="rare-order">
         <a class="order-link" href="#">Доставим редкий товар под заказ</a>
       </section>
-      <div class="info-contacts">
-        <section class="info">
+      <section class="info-contacts">
+        <div class="info">
           <h3 class="subtitle">О нас</h3>
           <p class="text">
             Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
@@ -151,8 +155,8 @@
             <li class="transport-company-item"><span>ТоксБерри</span></li>
           </ul>
           <a class="details" href="#">Подробнее о нас</a>
-        </section>
-        <section class="contacts">
+        </div>
+        <div class="contacts">
           <h3 class="subtitle">Контакты</h3>
           <p class="text">
             Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки.
@@ -168,8 +172,8 @@
             <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
           </ul>
           <a class="details" href="#">Напишите нам</a>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer class="mail">
       <div class="mail-container">
@@ -180,16 +184,16 @@
             Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
         </p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="newsletter-email">
+          <label class="newsletter-email">
             <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-          </p>
+          </label>
           <button class="button newsletter-button" type="submit">
-              Подписаться
+            Подписаться
           </button>
-        </form>
-        <p class="text">
+          <p class="form-text">
             Это бесплатно
-        </p>
+          </p>
+        </form>
       </div>
     </footer>
     <footer class="page-footer">
