@@ -683,6 +683,10 @@ li.category-item:nth-child(6) {
 .product-list {
   margin: 69px 0 0 72px;
   padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 40px;
+  grid-row-gap: 44px;
 }
 .product-list-pagination-container{
   width: 832px;
