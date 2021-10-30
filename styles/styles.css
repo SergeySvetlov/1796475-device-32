@@ -96,50 +96,73 @@ li {
   position: relative;
   width: 516px;
   height: 40px;
-  border: solid 2px black;
 }
 .search-bar {
+  display: flex;
   box-sizing: border-box;
   padding: 0;
   padding-left: 35px;
+  width: 516px;
+  height: 40px;
+  border-radius: 50px 50px 50px 50px;
 }
 .search-bar::before {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  top: 13px;
-  left: 0px;
+  top: 12px;
+  left: 16px;
   background-image: url("../img/icons/search.svg");
   background-repeat: no-repeat;
 }
 .search-bar-button {
+  display: none;
   box-sizing: border-box;
   background-color: RGBA(255,255,255,0);
   border: none;
   padding: 0;
   width: 160px;
-  height: 40px;
+  height: 38px;
   font-size: 16px;
   line-height: 19px;
-  border: solid 2px black;
 }
-.searh-bar-input {
+.search-bar-input {
   box-sizing: border-box;
   background-color: RGBA(255,255,255,0);
-  width: 300px;
-  height: 40px;
-  padding: 0;
+  vertical-align: central;
+  width: 324px;
+  padding: 0 0 0 20px;
+  border: none;
+  outline: none;
+}
+.search-bar-input::-webkit-input-placeholder {
+  color: RGBA(0,0,0,0.3);
+}
+.search-bar-input::-moz-placeholder {
+  color: RGBA(0,0,0,0.3);
+}
+.search-bar-input:-ms-input-placeholder {
+  color: RGBA(0,0,0,0.3);
+}
+.search-bar:hover .search-bar-input::-webkit-input-placeholder {
+  color: RGBA(0,0,0,0.6);
+}
+.search-bar:hover .search-bar-input::-moz-placeholder {
+  color: RGBA(0,0,0,0.6);
+}
+.search-bar:hover .search-bar-input:-ms-input-placeholder {
+  color: RGBA(0,0,0,0.6);
+}
+.search-bar:focus {
+  outline: solid 2px #af4fff;
+}
+.search-bar:active {
   border: solid 2px black;
 }
-.searh-bar-input::-webkit-input-placeholder {
-  color: RGBA(0,0,0,0.3)
-}
-.searh-bar-input::-moz-placeholder {
-  color: RGBA(0,0,0,0.3)
-}
-.searh-bar-input:-ms-input-placeholder {
-  color: RGBA(0,0,0,0.3)
+.search-bar:active .search-bar-button {
+  display: block;
+  border-left: solid 2px black;
 }
 .navigation-list li {
   position: relative;
@@ -472,6 +495,7 @@ li.category-item:nth-child(6)::before {
   text-align: center;
   margin-bottom: 25px;
   position: relative;
+  z-index: 0;
 }
 .tab .tablink-current {
   background-color: black;
@@ -486,6 +510,10 @@ li.category-item:nth-child(6)::before {
   background-color: #ffc700;
   left: 0px;
   top: 14px;
+  z-index: -1;
+}
+.tab .tablink-current::after {
+  background-color: black;
 }
 .tabcontent .subtitle {
   padding: 0;
@@ -830,7 +858,7 @@ left: 0px;
 }
 .breadcrumbs {
   display: flex;
-  margin: 12px 0 0 60px;
+  margin: 12px 0 0 47px;
   padding: 0;
 }
 .breadcrumbs-link {
@@ -839,8 +867,8 @@ left: 0px;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-  margin: 0 35px 0 0;
-  padding: 2px;
+  margin: 0 10px 0 0;
+  padding: 5px 12px 6px 13px;
 }
 .breadcrumbs-item {
   position: relative;
@@ -912,11 +940,23 @@ left: 0px;
   line-height: 19px;
 }
 .catalog-filter .tablinks {
+  position: relative;
   width: 200px;
   height: 40px;
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  z-index: 0;
+}
+.catalog-filter .tablinks::after {
+  content: "";
+  position: absolute;
+  background-color: #ffc700;
+  width: 200px;
+  height: 8px;
+  left: 0px;
+  top: 16px;
+  z-index: -1;
 }
 .product-cards {
   width: 832px;
@@ -941,27 +981,36 @@ left: 0px;
   width: 360px;
   text-decoration: none;
 }
+.product-card {
+  display: flex;
+}
 .product-card-link:hover {
   opacity: 0.4;
+  z-index: -2;
 }
 .product-card-link:hover~.tablinks {
   display: block;
-  top: 37%;
-  left: 25%;
-
 }
-.product-card-link:hover~.tablinks::after {
+.product-card .tablinks {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  padding: 9px 10px 11px 10px;
+  text-align: center;
+  width: 180px;
+  height: 40px;
+  margin-top: 170px;
+  margin-left: -270px;
+}
+.product-card .tablinks::after {
   content:"";
   position: absolute;
   background-color: #ffc700;
   width: 180px;
-  height: 7px;
-  top: 37%;
-  left: 0%;
+  height: 8px;
+  left: 0px;
+  top: 15px;
   z-index: -1;
-}
-.product-card {
-  position: relative;
 }
 .product-card-title {
   margin: 32px 0 0 0;
@@ -977,17 +1026,6 @@ left: 0px;
   color: #444444;
   font-weight: 400;
   line-height: 21px;
-}
-.product-card .tablinks {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  box-sizing: border-box;
-  padding: 9px 10px 11px 10px;
-  text-align: center;
-  width: 180px;
-  height: 40px;
 }
 .pagination-link {
   font-family: Raleway, Arial, sans-serif;
@@ -1010,12 +1048,43 @@ left: 0px;
   margin: 0;
 }
 .sorting-type {
-  width: 200px;
-  margin: 25px 0 0 0;
+  box-sizing: border-box;
+  width: 217px;
+  height: 30px;
+  align-self: center;
+  padding: 0 15px 0 15px;
+}
+.select-control {
+  background-color: RGBA(0, 0, 0, 0);
+  border: none;
+  width: 189px;
+}
+.arrow-up {
+  background-image: url(../img/icons/sort_up.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  align-self: center;
+  opacity: 0.2;
+}
+.arrow-down {
+  background-image: url(../img/icons/sort_down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  opacity: 0.2;
+}
+.arrow-current {
+  opacity: 1;
 }
 .catalog-sorting-container .subtitle-catalog {
-  width: 200px;
-  margin: 25px 0 25px 72px;
+  width: 150px;
+  align-self: center;
+  margin: 0 30px 0 72px;
   padding: 0;
 }
 .pagination-show-more {
@@ -1033,11 +1102,42 @@ left: 0px;
   height: 70px;
   background-color: #ebebeb;
   display: flex;
-  justify-content: space-between;
 }
-.pagination-link {
+.pagination-item {
+  align-self: center;
+}
+.pagination-item:first-child {
+  margin-right: auto;
+}
+.pagination-item:last-child {
+  margin-left: auto;
+}
+.pagination-item .pagination-link {
   display: block;
-  padding: 27px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 19px;
+  color: black;
+  opacity: 0.3;
+  width: 38px;
+  height: 38px;
+  padding: 8px 16px 11px 15px;
 }
-
+.pagination-item:first-child .pagination-link,
+.pagination-item:last-child .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  padding: 27px;
+  width: 135px;
+  height: 70px;
+  text-decoration: none;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  color: black;
+  opacity: 1;
+}
 
