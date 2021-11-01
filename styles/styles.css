@@ -71,6 +71,7 @@ li {
   margin-bottom: -20px;
   z-index:1;
 }
+/*Нафигация*/
 .navegation {
   background-color: #ffe17f;
   width: 1160px;
@@ -154,7 +155,7 @@ li {
   border: none;
   padding: 0;
   width: 160px;
-  height: 38px;
+  height: 40px;
   font-size: 16px;
   line-height: 19px;
   border-radius: 0 50px 50px 0;
@@ -331,6 +332,7 @@ li {
   opacity: 0.3;
   border: none;
 }
+/*Слайдер*/
 .main-products {
   width: 1160px;
   margin: 0 auto;
@@ -496,6 +498,7 @@ li {
 .parameter {
   font-size: 16px;
 }
+/*Категории товаров*/
 .product-categories {
   width: 1160px;
   margin: 0 auto;
@@ -567,6 +570,7 @@ li {
 .category-item-link:active::before {
   border: none;
 }
+/*Секция со ссылками "табами"*/
 .tablinks {
   font-family: Raleway, Arial, sans-serif;
   font-style: normal;
@@ -682,6 +686,7 @@ li {
   margin: 0 0 0 116px;
   width: 497px;
 }
+/*Секция с доствакой редких товаров*/
 .rare-order {
   margin: 0 auto;
   margin-top: 90px;
@@ -754,6 +759,7 @@ li {
   line-height: 20px;
   color: #000000;
 }
+/*Секция с информацией и контактами*/
 .info-contacts {
   margin: 0 auto;
   margin-top: 97px;
@@ -851,6 +857,7 @@ li {
 .contacts-phone {
   color: #444444;
 }
+/*Секция с формой*/
 .mail {
   background-color: #ebebeb;
   margin-top: 87px;
@@ -933,6 +940,7 @@ li {
   color: #444444;
   border: none;
 }
+/*Подвал страницы*/
 .page-footer {
   background-color: #444444;
 }
@@ -1144,6 +1152,7 @@ left: 0px;
   opacity: 0.3;
   border: none;
 }
+/*Каталог*/
 .inner-header {
   width: 1160px;
   margin: 0 auto;
@@ -1152,6 +1161,7 @@ left: 0px;
   margin: 39px 0 0 60px;
   padding: 0;
 }
+/*Хлебные крошки*/
 .breadcrumbs {
   display: flex;
   margin: 12px 0 0 47px;
@@ -1159,12 +1169,23 @@ left: 0px;
 }
 .breadcrumbs-link {
   list-style-type: none;
-  color: #444444;
+  color: RGBA(0, 0, 0, 0.6);
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
   margin: 0 10px 0 0;
   padding: 5px 12px 6px 13px;
+}
+.breadcrumbs-link:focus {
+  outline: none;
+  border: solid 5px #af4fff;
+}
+.breadcrumbs-link:hover {
+  color: RGBA(0, 0, 0, 1);
+}
+.breadcrumbs-link:active {
+  color: RGBA(0, 0, 0, 0.3);
+  border: none;
 }
 .breadcrumbs-item {
   position: relative;
@@ -1180,6 +1201,7 @@ left: 0px;
   top: 13px;
   margin-left: 20px;
 }
+/**/
 .catalog-products {
   margin: 49px 0 0 0;
 }
@@ -1191,6 +1213,7 @@ left: 0px;
   background-color: #ebebeb;
   margin-left: auto;
 }
+/*"Фильтр"*/
 .subtitle-catalog-container {
   box-sizing: border-box;
   background-color: #dcdcdc;
@@ -1248,16 +1271,30 @@ left: 0px;
   content: "";
   position: absolute;
   background-color: #ffc700;
-  width: 200px;
+  width: 100%;
   height: 8px;
   left: 0px;
   top: 16px;
   z-index: -1;
 }
+/*тут фокус задал тенями, так как иначе псевдоэлемент сползает чуть вниз*/
+.catalog-filter .tablinks:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #af4fff;
+}
+.catalog-filter .tablinks:hover {
+  background-color: #ffc700;
+}
+.catalog-filter .tablinks:active {
+  background-color: #ffc700;
+  color: RGBA(0, 0, 0, 0.3);
+  box-shadow: none;
+}
 .product-cards {
   width: 832px;
   margin-right: auto;
 }
+/*Карточки товаров*/
 .product-list {
   margin: 69px 0 0 72px;
   padding: 0;
@@ -1269,7 +1306,6 @@ left: 0px;
 .product-list-pagination-container{
   width: 832px;
 }
-
 .product-card-link {
   display: flex;
   flex-wrap: wrap;
@@ -1279,6 +1315,10 @@ left: 0px;
 }
 .product-card {
   display: flex;
+}
+.product-card-link:focus {
+  outline: none;
+  border: solid 5px #af4fff;
 }
 .product-card-link:hover {
   opacity: 0.4;
@@ -1308,6 +1348,15 @@ left: 0px;
   top: 15px;
   z-index: -1;
 }
+.product-card .tablinks:hover{
+  display: block;
+  background-color: #ffc700;
+}
+.product-card .tablinks:active{
+  display: block;
+  background-color: #ffc700;
+  color: RGBA(0, 0, 0, 0.3); 
+}
 .product-card-title {
   margin: 32px 0 0 0;
   max-width: 260px;
@@ -1334,6 +1383,7 @@ left: 0px;
   text-decoration: none;
   text-transform: uppercase;
 }
+/*Сортировка*/
 .catalog-sorting {
   background-color: #ebebeb;
 }
@@ -1344,37 +1394,61 @@ left: 0px;
   margin: 0;
 }
 .sorting-type {
-  box-sizing: border-box;
-  width: 217px;
-  height: 30px;
   align-self: center;
-  padding: 0 15px 0 15px;
 }
 .select-control {
   background-color: RGBA(0, 0, 0, 0);
+  width: 217px;
+  height: 40px;
+  padding: 0 23px 0 13px;
   border: none;
-  width: 189px;
 }
-.arrow-up {
+.select-control:focus {
+  outline: none;
+  border: solid 5px #af4fff;
+}
+.select-control:hover {
+  opacity: 0.6;
+}
+.select-control:active {
+  opacity: 0.3;
+  border: none;
+}
+.arrow {
   background-image: url(../img/icons/sort_up.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 30px;
   height: 30px;
-  margin-left: auto;
   align-self: center;
   opacity: 0.2;
+}
+.arrow-up {
+  margin-left: auto;
+}
+/*подгрузил дополнительно серые стрелочки, если менять цвет через opacity то рамка фокуса тоже светлеет*/
+.arrow-up:focus {
+  background-image: url(../img/icons/sort_up_grey.svg);
 }
 .arrow-down {
-  background-image: url(../img/icons/sort_down.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  align-self: center;
-  opacity: 0.2;
+  transform: rotate(180deg);
+}
+.arrow-down:focus {
+  background-image: url(../img/icons/sort_up_grey.svg);
 }
 .arrow-current {
+  opacity: 1;
+}
+.arrow:focus {
+  outline: none;
+  border: solid 5px #af4fff;
+  opacity: 1;
+}
+.arrow:hover {
+  opacity: 0.5;
+}
+.arrow:active {
+  border: none;
   opacity: 1;
 }
 .catalog-sorting-container .subtitle-catalog {
@@ -1383,14 +1457,27 @@ left: 0px;
   margin: 0 30px 0 72px;
   padding: 0;
 }
+/*Кнопка загрузить ещё*/
 .pagination-show-more {
   width: 760px;
   height: 55px;
   margin: 44px 0 0 72px;
   background-color: white;
-  border: solid;
-  border-color: #ebebeb;
+  border: solid 3px #ebebeb;
 }
+.pagination-show-more:focus {
+  outline: none;
+  border: solid 5px #af4fff;
+}
+.pagination-show-more:hover {
+  outline: none;
+  border: solid 3px black;
+}
+.pagination-show-more:active {
+  border: solid 3px black;
+  opacity: 0.3;
+}
+/*Пагинация*/
 .pagination {
   margin: 51px 0 77px 72px;
   padding: 0;
@@ -1412,21 +1499,33 @@ left: 0px;
   display: block;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: Rubik, Calibri, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: black;
-  opacity: 0.3;
+  letter-spacing: normal;
+  color: RGBA(68,68,68, 0.3);
   width: 38px;
   height: 38px;
   padding: 8px 16px 11px 15px;
 }
-.pagination-item:first-child .pagination-link,
-.pagination-item:last-child .pagination-link {
+.pagination-item .pagination-link:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 5px #af4fff;
+}
+.pagination-item .pagination-link:hover {
+  color: RGBA(68,68,68, 1);
+}
+.pagination-item .pagination-link:active {
+  color: RGBA(68,68,68, 0.1);
+  box-shadow: none;
+}
+
+.pagination-button {
   display: block;
   box-sizing: border-box;
-  padding: 27px;
-  width: 135px;
   height: 70px;
+  padding: 27px 29px 27px 29px;
   text-decoration: none;
   font-family: Raleway, Arial, sans-serif;
   font-size: 16px;
@@ -1434,6 +1533,17 @@ left: 0px;
   line-height: 19px;
   letter-spacing: 0.2em;
   color: black;
-  opacity: 1;
+}
+.pagination-button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 5px #af4fff;
+}
+.pagination-button:hover {
+  background-color: #dcdcdc;
+}
+.pagination-button:active {
+  background-color: #dcdcdc;
+  opacity: 0.3;
+  box-shadow: none;
 }
 
