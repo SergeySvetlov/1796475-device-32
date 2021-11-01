@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\img",
+    "\\img\\decor",
     "\\img\\icons",
     "\\styles"
   ],
-  "SelectedNode": "\\catalog.html",
+  "SelectedNode": "\\img\\icons\\info.svg",
   "PreviewInSolutionExplorer": false
 }
