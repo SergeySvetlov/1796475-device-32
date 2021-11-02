@@ -1320,13 +1320,15 @@ left: 0px;
 .product-card {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   justify-content: space-between;
   width: 360px;
   text-decoration: none;
+  z-index: 0;
 }
 .product-card-image {
-  opacity: 1;
   border: solid 5px RGBA(0, 0, 0, 0);
+  box-sizing: border-box;
 }
 .product-card-title {
   margin: 32px 0 0 0;
@@ -1343,19 +1345,27 @@ left: 0px;
   font-weight: 400;
   line-height: 21px;
 }
-.product-card .tablinks {
-  position: relative;
-  display: none;
-  box-sizing: border-box;
-  padding: 9px 10px 11px 10px;
-  text-align: center;
+.tablinks-position {
+  position: absolute;
+  display: block;
   width: 180px;
   height: 40px;
-  margin-top: -230px;
-  margin-left: 90px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  top: 175px;
+  left: 90px;
+  z-index: 1;
+}
+.tablinks-position .tablinks {
+  position: relative;
+  box-sizing: border-box;
+  width: 180px;
+  height: 40px;
+  padding: 9px 10px 11px 10px;
   z-index: 0;
 }
-.product-card .tablinks::after {
+.tablinks-position .tablinks::after {
   content:"";
   position: absolute;
   background-color: #ffc700;
@@ -1369,28 +1379,28 @@ left: 0px;
   outline: none;
   border: solid 5px #af4fff;
 }
-.product-card-title:focus {
+.product-card-image:focus ~ .product-card-title {
   outline: none;
   color: #af4fff;
 }
-.product-card-price:focus {
+.product-card-image:focus ~ .product-card-price {
   outline: none;
   color: #af4fff;
 }
-.product-card :hover ~ .tablinks {
+.product-card :hover ~ .tablinks-position {
   display: block;
 }
 .product-card-image:hover {
   opacity: 0.4;
 }
-.product-card .tablinks:hover {
+.product-card .tablinks-position:hover {
   display: block;
   background-color: #ffc700;
 }
-.product-card .tablinks:active{
+.tablinks-position .tablinks:active {
   display: block;
   background-color: #ffc700;
-  color: RGBA(0, 0, 0, 0.3); 
+  color: RGBA(0, 0, 0, 0.3);
 }
 
 
