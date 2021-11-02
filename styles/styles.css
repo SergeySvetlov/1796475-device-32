@@ -198,6 +198,7 @@ li {
   text-decoration: none;
   height: 40px;
   padding: 10px;
+  border: solid 3px RGBA(0, 0, 0, 0);
 }
 .navigation-link:focus {
   outline: none;
@@ -282,6 +283,7 @@ li {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  border: solid 3px RGBA(0, 0, 0, 0);
 }
 .other-bottom a:focus {
   outline: none;
@@ -533,6 +535,7 @@ li {
   background-position: center;
   height: 160px;
   width: 160px;
+  border: solid 3px RGBA(0, 0, 0, 0);
 }
 .category-item:nth-child(1) .category-item-link::before {
   background-image: url(../img/decor/virtual_reality.svg);
@@ -738,7 +741,7 @@ li {
 }
 .order-link:focus {
   outline: none;
-  border: solid 5px #af4fff;
+  box-shadow: 0 0 0 5px #af4fff;
 }
 .order-link:hover::after {
   background-color: #ffc700;
@@ -748,7 +751,7 @@ li {
 }
 .order-link:active {
   opacity: 0.3;
-  border: none;
+  box-shadow: none;
 }
 .transport-company-item {
   list-style-type: disc;
@@ -805,6 +808,9 @@ li {
   font-size: 24px;
   font-weight: 700;
   color: #444444;
+}
+.contacts-phone:hover {
+  color:black;
 }
 .info .details {
   display: block;
@@ -906,7 +912,7 @@ li {
 .field:active {
   opacity: 1;
 }
-.field:invalid {
+.field:focus:invalid {
   opacity: 1;
   border-color: #ff3d3d;
 }
@@ -977,7 +983,7 @@ top: 110px;
 left: 0px;
 }
 .footer-center-section {
-  flex-basis: 505px;
+  flex-basis: 513px;
   margin: 0;
   padding: 0;
 }
@@ -1004,6 +1010,7 @@ left: 0px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  border: solid 3px RGBA(0, 0, 0, 0);
 }
 .info-list-item a:focus {
   outline: none;
@@ -1041,6 +1048,7 @@ left: 0px;
   margin: 7px;
   background-color: RGBA(255,255,255,0.3);
   border-radius: 50%;
+  border: solid 5px RGBA(0, 0, 0, 0);
 }
 .footer-social-item a::before {
   content: "";
@@ -1110,6 +1118,7 @@ left: 0px;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
+  border: solid 3px RGBA(0, 0, 0, 0);
 }
 .footer-right-section .contacts-phone:focus {
   outline: none;
@@ -1139,6 +1148,7 @@ left: 0px;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
+  border: solid 3px RGBA(0, 0, 0, 0);
 }
 .htmlacademy-link:focus {
   outline: none;
@@ -1175,6 +1185,7 @@ left: 0px;
   text-decoration: none;
   margin: 0 10px 0 0;
   padding: 5px 12px 6px 13px;
+  border: solid 5px RGBA(0, 0, 0, 0);
 }
 .breadcrumbs-link:focus {
   outline: none;
@@ -1294,7 +1305,7 @@ left: 0px;
   width: 832px;
   margin-right: auto;
 }
-/*Карточки товаров*/
+/*Карточки товаров c пагинацией*/
 .product-list {
   margin: 69px 0 0 72px;
   padding: 0;
@@ -1306,56 +1317,16 @@ left: 0px;
 .product-list-pagination-container{
   width: 832px;
 }
-.product-card-link {
+.product-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 360px;
   text-decoration: none;
 }
-.product-card {
-  display: flex;
-}
-.product-card-link:focus {
-  outline: none;
-  border: solid 5px #af4fff;
-}
-.product-card-link:hover {
-  opacity: 0.4;
-  z-index: -2;
-}
-.product-card-link:hover~.tablinks {
-  display: block;
-}
-.product-card .tablinks {
-  position: relative;
-  display: none;
-  box-sizing: border-box;
-  padding: 9px 10px 11px 10px;
-  text-align: center;
-  width: 180px;
-  height: 40px;
-  margin-top: 170px;
-  margin-left: -270px;
-}
-.product-card .tablinks::after {
-  content:"";
-  position: absolute;
-  background-color: #ffc700;
-  width: 180px;
-  height: 8px;
-  left: 0px;
-  top: 15px;
-  z-index: -1;
-}
-.product-card .tablinks:hover{
-  display: block;
-  background-color: #ffc700;
-}
-.product-card .tablinks:active{
-  display: block;
-  background-color: #ffc700;
-  color: RGBA(0, 0, 0, 0.3); 
+.product-card-image {
+  opacity: 1;
+  border: solid 5px RGBA(0, 0, 0, 0);
 }
 .product-card-title {
   margin: 32px 0 0 0;
@@ -1372,17 +1343,57 @@ left: 0px;
   font-weight: 400;
   line-height: 21px;
 }
-.pagination-link {
-  font-family: Raleway, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 21px;
-  color: #000000;
-  letter-spacing: 0.2em;
-  text-decoration: none;
-  text-transform: uppercase;
+.product-card .tablinks {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  padding: 9px 10px 11px 10px;
+  text-align: center;
+  width: 180px;
+  height: 40px;
+  margin-top: -230px;
+  margin-left: 90px;
+  z-index: 0;
 }
+.product-card .tablinks::after {
+  content:"";
+  position: absolute;
+  background-color: #ffc700;
+  width: 180px;
+  height: 8px;
+  left: 0px;
+  top: 15px;
+  z-index: -1;
+}
+.product-card-image:focus {
+  outline: none;
+  border: solid 5px #af4fff;
+}
+.product-card-title:focus {
+  outline: none;
+  color: #af4fff;
+}
+.product-card-price:focus {
+  outline: none;
+  color: #af4fff;
+}
+.product-card :hover ~ .tablinks {
+  display: block;
+}
+.product-card-image:hover {
+  opacity: 0.4;
+}
+.product-card .tablinks:hover {
+  display: block;
+  background-color: #ffc700;
+}
+.product-card .tablinks:active{
+  display: block;
+  background-color: #ffc700;
+  color: RGBA(0, 0, 0, 0.3); 
+}
+
+
 /*Сортировка*/
 .catalog-sorting {
   background-color: #ebebeb;
@@ -1441,14 +1452,14 @@ left: 0px;
 }
 .arrow:focus {
   outline: none;
-  border: solid 5px #af4fff;
+  box-shadow: 0 0 0 5px #af4fff;
   opacity: 1;
 }
 .arrow:hover {
   opacity: 0.5;
 }
 .arrow:active {
-  border: none;
+  box-shadow: none;
   opacity: 1;
 }
 .catalog-sorting-container .subtitle-catalog {
@@ -1488,6 +1499,17 @@ left: 0px;
 }
 .pagination-item {
   align-self: center;
+}
+.pagination-link {
+  font-family: Raleway, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .pagination-item:first-child {
   margin-right: auto;
