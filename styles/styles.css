@@ -96,7 +96,6 @@ li {
   display: flex;
   box-sizing: border-box;
   padding: 0;
-  padding-left: 35px;
   width: 516px;
   height: 40px;
   border-radius: 50px 50px 50px 50px;
@@ -115,9 +114,10 @@ li {
   box-sizing: border-box;
   background-color: RGBA(255,255,255,0);
   vertical-align: central;
-  width: 324px;
-  padding: 0 0 0 20px;
+  width: 356px;
+  padding: 0 0 0 55px;
   border: none;
+  border-radius: 50px 0 0 50px;
   outline: none;
 }
 .search-bar-input::-webkit-input-placeholder {
@@ -139,14 +139,24 @@ li {
   color: RGBA(0,0,0,0.6);
 }
 .search-bar:focus {
-  outline: solid 3px #af4fff;
+  outline: none;
+  border: solid 3px #af4fff;
 }
-.search-bar:active {
+.search-bar:active .search-bar-input {
   border: solid 2px black;
+  border-right: none;
 }
 .search-bar:active .search-bar-button {
   display: block;
-  border-left: solid 2px black;
+  border: solid 2px black;
+}
+.search-bar-input:focus {
+  border: solid 2px black;
+  border-right: none;
+}
+.search-bar-input:focus ~ .search-bar-button {
+  display: block;
+  border: solid 2px black;
 }
 .search-bar-button {
   display: none;
@@ -160,19 +170,15 @@ li {
   line-height: 19px;
   border-radius: 0 50px 50px 0;
 }
-.search-bar-button-active {
-  display: block;
-  border: solid 2px black;
-}
-.search-bar-button-active:focus {
+.search-bar-button:focus {
   outline: none;
   border-color: #af4fff;
 }
-.search-bar-button-active:hover {
+.search-bar-button:hover {
   background-color: black;
   color: white;
 }
-.search-bar-button-active:active {
+.search-bar-button:active {
   background-color: black;
   color: RGBA(255, 255, 255, 0.3);
   border: none;
@@ -221,7 +227,7 @@ li {
   position: absolute;
   width: 13px;
   height: 12px;
-  top: 13px;
+  top: 16px;
   left: 21px;
   background-image: url("../img/icons/user.svg");
   background-repeat: no-repeat;
@@ -235,7 +241,7 @@ li {
   position: absolute;
   width: 10px;
   height: 12px;
-  top: 13px;
+  top: 16px;
   left: 21px;
   background-image: url("../img/icons/compare.svg");
   background-repeat: no-repeat;
@@ -249,7 +255,7 @@ li {
   position: absolute;
   width: 16px;
   height: 14px;
-  top: 11px;
+  top: 13px;
   left: 18px;
   background-image: url("../img/icons/cart.svg");
   background-repeat: no-repeat;
@@ -1327,11 +1333,10 @@ left: 0px;
   z-index: 0;
 }
 .product-card-image {
-  border: solid 5px RGBA(0, 0, 0, 0);
   box-sizing: border-box;
 }
 .product-card-title {
-  margin: 32px 0 0 0;
+  margin: 22px 0 0 0;
   max-width: 260px;
   color: #000000;
   letter-spacing: -0.02em;
@@ -1340,7 +1345,7 @@ left: 0px;
   line-height: 24px;
 }
 .product-card-price {
-  margin: 32px 0 0 0;
+  margin: 22px 0 0 0;
   color: #444444;
   font-weight: 400;
   line-height: 21px;
@@ -1376,8 +1381,8 @@ left: 0px;
   z-index: -1;
 }
 .product-card-image:focus {
-  outline: none;
-  border: solid 5px #af4fff;
+  outline: solid 5px #af4fff;
+  outline-offset:-5px;
 }
 .product-card-image:focus ~ .product-card-title {
   outline: none;
