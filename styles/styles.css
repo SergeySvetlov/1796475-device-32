@@ -120,6 +120,7 @@ li {
   border-radius: 50px 0 0 50px;
   outline: none;
 }
+/*состояния для plceholder в разных браузерах*/
 .search-bar-input::-webkit-input-placeholder {
   color: RGBA(0,0,0,0.3);
 }
@@ -138,6 +139,9 @@ li {
 .search-bar:hover .search-bar-input:-ms-input-placeholder {
   color: RGBA(0,0,0,0.6);
 }
+/*Добавил фокус для тега label через tabindex.
+ Фокус для label отвечает за состояние "Фокус" в макете,
+ а фокус для input реализует состояние "Активность" по стайлгайду*/
 .search-bar:focus {
   outline: none;
   border: solid 3px #af4fff;
@@ -150,6 +154,7 @@ li {
   display: block;
   border: solid 2px black;
 }
+/*Состояние "Активность" т.е. текст вводится и у поля появляются рамки с кнопкой "Найти"*/
 .search-bar-input:focus {
   border: solid 2px black;
   border-right: none;
@@ -908,7 +913,10 @@ li {
   border-bottom: solid 3px black;
   opacity: 0.1;
 }
-.field:focus {
+/*Добавил фокус для тега label через tabindex.
+ Фокус для label отвечает за состояние "Фокус" в макете,
+ а фокус для input реализует состояние "Активность" по стайлгайду.*/
+.newsletter-email:focus {
   outline: none;
   background-color: #dcdcdc;
 }
@@ -918,6 +926,14 @@ li {
 .field:active {
   opacity: 1;
 }
+/*Состояние "Активность" по стайлгайду.*/
+.field:focus {
+  outline: none;
+  opacity: 1;
+}
+/*Состояние "Ошибка" по стайлгайду. Активируется сразу,
+ поскольку placeholder по макету заполнен в некорректной форме. Будет активно до тех пор,
+ пока поле не заполнется корректно.*/
 .field:focus:invalid {
   opacity: 1;
   border-color: #ff3d3d;
@@ -952,9 +968,10 @@ li {
   color: #444444;
   border: none;
 }
-/*Подвал страницы*/
+/*Футер*/
 .page-footer {
   background-color: #444444;
+  padding-bottom: 61px;
 }
 .page-footer-container {
   width: 1160px;
@@ -989,7 +1006,7 @@ top: 110px;
 left: 0px;
 }
 .footer-center-section {
-  flex-basis: 513px;
+  flex-basis: 515px;
   margin: 0;
   padding: 0;
 }
@@ -1367,14 +1384,14 @@ left: 0px;
   box-sizing: border-box;
   width: 180px;
   height: 40px;
-  padding: 9px 10px 11px 10px;
+  padding: 9px 17px 11px 17px;
   z-index: 0;
 }
 .tablinks-position .tablinks::after {
   content:"";
   position: absolute;
   background-color: #ffc700;
-  width: 180px;
+  width: 100%;
   height: 8px;
   left: 0px;
   top: 15px;
@@ -1398,17 +1415,16 @@ left: 0px;
 .product-card-image:hover {
   opacity: 0.4;
 }
-.product-card .tablinks-position:hover {
+.tablinks-position:hover {
   display: block;
+}
+.tablinks-position .tablinks:hover {
   background-color: #ffc700;
 }
 .tablinks-position .tablinks:active {
-  display: block;
   background-color: #ffc700;
   color: RGBA(0, 0, 0, 0.3);
 }
-
-
 /*Сортировка*/
 .catalog-sorting {
   background-color: #ebebeb;
