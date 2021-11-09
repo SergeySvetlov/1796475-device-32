@@ -2,11 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\img",
-    "\\img\\content",
     "\\img\\decor",
     "\\img\\icons",
     "\\styles"
   ],
-  "SelectedNode": "\\catalog.html",
+  "SelectedNode": "\\.gitattributes",
   "PreviewInSolutionExplorer": false
 }
