@@ -286,15 +286,16 @@ body {
   display: block;
   box-sizing: border-box;
   width: max-content;
+  min-width: 21px;
   height: 21px;
   border-radius: 50px 50px 50px 50px;
   background-color: white;
-  padding: 3px 7px 0 7px;
+  padding: 2px 6px 0 6px;
   color: black;
-  font-size: 12px;
-  line-height: 14px;
-  left: 4px;
-  top: -1px;
+  font-size: 14px;
+  line-height: 17px;
+  right: 107px;
+  top: -4px;
 }
 .popover::before{
   content: "";
@@ -1518,9 +1519,6 @@ body {
   font-weight: 700;
   line-height: 20px;
 }
-.catalog-filter-list {
-  margin: 20px 0 0 0;
-}
 .catalog-filter {
   padding: 0;
   margin: 81px 0 0 60px;
@@ -1607,22 +1605,120 @@ body {
   outline: none;
   width: min-content;
 }
+.catalog-filter-list {
+  margin: 20px 0 0 0;
+  list-style-type: none;
+  padding: 0;
+}
 .catalog-filter-item {
+  padding-bottom: 20px;
 }
 .control {
   position: relative;
   display: block;
-  padding-left: 0px;
+  padding-left: 37px;
+  height: 20px;
+}
+.control-mark {
+  position: absolute;
+  box-sizing: border-box;
+  top: 6px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid Black;
+  border-radius: 15%;
+  opacity: 0.2;
+}
+.control-input[type="checkbox"]:checked + .control-mark {
+  opacity: 1;
+}
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  content:"";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/icons/tick.svg);
+  background-repeat: no-repeat;
+  left: 3px;
+  top: 3px;
 }
 .control-label {
   color: #000000;
   font-size: 16px;
   line-height: 19px;
 }
-.select-control {
-  color: #000000;
-  font-size: 16px;
-  line-height: 19px;
+.control-mark:focus {
+  border: 2px solid #af4fff;
+  opacity: 1;
+  outline: none;
+}
+.control-mark:focus + .control-label {
+  color: #af4fff;
+}
+.control-input[type="checkbox"]:checked + .control-mark:focus::after {
+  background-image: url(../img/icons/tick_focus.svg);
+}
+.control-input[type="checkbox"]:checked + .control-mark:hover {
+  opacity: 0.5;
+}
+.control-input[type="checkbox"]:checked + .control-mark:hover + .control-label {
+  opacity: 0.5;
+}
+.control-mark:active {
+  border-color: black;
+  opacity: 0.2;
+}
+.control-mark:active +.control-label {
+  color: black;
+  opacity: 0.2;
+}
+.control-input[type="checkbox"]:checked + .control-mark:active {
+  opacity: 0.2;
+}
+.control-input[type="checkbox"]:checked + .control-mark:active::after {
+  background-image: url(../img/icons/tick.svg);
+}
+.control-input[type="checkbox"]:checked + .control-mark:active + .control-label {
+  color: black;
+  opacity: 0.2;
+}
+.radio-mark {
+  border-radius: 50%;
+}
+.control-input[type="radio"]:checked + .radio-mark {
+  opacity: 1;
+}
+.control-input[type="radio"]:checked + .radio-mark:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  left: 4px;
+  top: 4px;
+}
+.control-input[type="radio"]:checked + .radio-mark:focus:after {
+  background-color:  #af4fff;
+}
+.control-input[type="radio"]:checked + .radio-mark:hover {
+  opacity: 0.5;
+}
+.control-input[type="radio"]:checked + .radio-mark:after:hover {
+  opacity: 0.5;
+}
+.control-input[type="radio"]:checked + .radio-mark:hover + .control-label {
+  opacity: 0.5;
+}
+.control-input[type="radio"]:checked + .radio-mark:active {
+  opacity: 0.2;
+}
+.control-input[type="radio"]:checked + .radio-mark:active:after {
+  background-color: black;
+}
+.control-input[type="radio"]:checked + .radio-mark:active + .control-label {
+  opacity: 0.2;
 }
 .catalog-filter .tablinks {
   position: relative;
@@ -1782,6 +1878,9 @@ body {
   align-self: center;
 }
 .select-control {
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
   background-color: RGBA(0, 0, 0, 0);
   width: 217px;
   height: 40px;
@@ -1943,4 +2042,317 @@ body {
   opacity: 0.3;
   box-shadow: none;
 }
-
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}
+.modal {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 70px;
+  background-color: #FFFFFF;
+  border: solid 10px black;
+  width: 920px;
+  height: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.modal-title {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: black;
+  margin: 0;
+  height: 50px;
+}
+.modal-close-button {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  background-color: white;
+  background-image: url(../img/icons/big_cross_close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+}
+.modal-close-button:focus {
+  outline: none;
+  box-shadow:  0 0 0 5px #af4fff;
+}
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+.modal-close-button:active {
+  opacity: 0.3;
+  box-shadow: none
+}
+.modal-form {
+  margin-top: 63px;
+  width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.modal-form-label {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+}
+.label-name {
+  width: 360px;
+  position: relative;
+}
+.label-name::after {
+  content: "Пожалуйста, представьтесь";
+  position: absolute;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  left: 0;
+  top: 105px;
+}
+.label-mail {
+  width: 360px;
+  position: relative;
+}
+.label-mail::after {
+  content: "Забавный у вас адрес";
+  position: absolute;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  left: 0;
+  top: 105px;
+}
+.label-info {
+  width: 560px;
+  margin-top: 40px;
+}
+.label-number {
+  width: 160px;
+  margin-top: 40px;
+  position: relative;
+}
+.modal-input {
+  height: 60px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid RGBA(255, 255, 255, 0);
+  background-color: #f0f0f0;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+.modal-input:focus {
+  box-shadow: 0 0 0 5px #af4fff;
+}
+.modal-input:active {
+  box-shadow: inset 0 0 0 3px black;
+}
+/*В случае ошибки, c помощью JS задаются соответствующие классы для label и input*/
+.modal-input-error {
+  box-shadow: inset 0 0 0 3px #ff3d3d;
+}
+.label-error::after {
+  color: #ff3d3d;
+}
+.modal-input::-webkit-input-placeholder {
+  color: RGBA(0,0,0,0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.modal-input::-moz-placeholder {
+  color: RGBA(0,0,0,0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.modal-input:-ms-input-placeholder {
+  color: RGBA(0,0,0,0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.input-name {
+  background-image: url("../img/icons/user_grey.svg");
+  background-repeat: no-repeat;
+  background-position: 326px center;
+}
+.input-mail {
+  background-image: url("../img/icons/mail_grey.svg");
+  background-repeat: no-repeat;
+  background-position: 326px center;
+}
+.input-number {
+  height: 60px;
+  padding: 0 50px 0 50px;
+  text-align: center;
+}
+/* убрали стрелки для Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+/* убрали стрелки для Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.number-button {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid RGBA(255, 255, 255, 0);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+.number-button::after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+  width: 16px;
+  height: 2px;
+  top: 14px;
+  left: 6px;
+}
+.number-button-minus {
+  top: 47px;
+  left: 11px;
+}
+.number-button-plus {
+  top: 47px;
+  right: 11px;
+}
+.number-button-plus::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+  width: 16px;
+  height: 2px;
+  transform: rotate(90deg);
+  top: 14px;
+  left: 6px;
+}
+.number-button:focus {
+  border: 2px solid #af4fff;
+}
+.number-button:hover::after {
+  opacity: 1;
+}
+.number-button-plus:hover::before {
+  opacity: 1;
+}
+.number-button:active {
+  border: 2px solid RGBA(255, 255, 255, 0);
+}
+.number-button:active::after {
+  opacity: 0.1;
+}
+.number-button-plus:active::before {
+  opacity: 0.1;
+}
+.input-number-info {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #ffe17f;
+  background-image: url("../img/icons/info_black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  top: -2px;
+  right: 14px;
+}
+.input-number-info:after {
+  display: none;
+  content:"Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.";
+  position: absolute;
+  box-sizing: border-box;
+  width: 200px;
+  height: 160px;
+  background-color: black;
+  padding: 19px 17px 0 19px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: normal;
+  top: 36px;
+  left: -140px;
+  z-index: 3;
+}
+.input-number-info::before {
+  display: none;
+  content:"";
+  position: absolute;
+  box-sizing: border-box;
+  width: 14px;
+  height: 6px;
+  background-image: url("../img/icons/triangle.svg");
+  top: 30px;
+  left: 5px;
+}
+.input-number-info:hover:after,
+.input-number-info:hover::before {
+  display: block;
+}
+.modal-button {
+  position: relative;
+  margin-top: 40px;
+  width: 200px;
+  height: 40px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  z-index: 0;
+}
+.modal-button::after {
+  content: "";
+  position: absolute;
+  background-color: #ffc700;
+  width: 100%;
+  height: 8px;
+  left: 0px;
+  top: 16px;
+  z-index: -1;
+}
+/*тут фокус задал тенями, так как иначе псевдоэлемент сползает чуть вниз*/
+.modal-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #af4fff;
+}
+.modal-button:hover {
+  background-color: #ffc700;
+}
+.modal-button:active {
+  background-color: #ffc700;
+  color: RGBA(0, 0, 0, 0.3);
+  box-shadow: none;
+}
