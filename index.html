@@ -11,10 +11,10 @@
     <nav class="navigation">
       <div class="navigation-top">
         <form class="search-bar-form" name="search-bar">
-          <label class="search-bar search-bar-active" tabindex="0">
+          <label class="search-bar" tabindex="0">
             <input class="search-bar-input" type="search" placeholder="Поиск по сайту" />
-            <button class="search-bar-button" type="submit">Найти</button>
           </label>
+            <button class="search-bar-button" type="submit">Найти</button>
         </form>
         <ul class="navigation-list">
           <li class="navigation-item-entrance">
@@ -36,17 +36,17 @@
                 <h2 class="visually-hidden">Корзина</h2>
                 <ul class="basket-items">
                   <li class="basket-item">
-                    <a class="basket-item-link" href="#" tabindex="10">
-                      <img class="basket-item-img" src="img/content/product_one.jpg" alt="Селфи-палка в форме протянутой руки" width="41" height="43" tabindex="0" />
-                      <p class="basket-item-title">Любительская<br /> селфи-палка</p>
+                    <a class="basket-item-link" href="#">
+                      <img class="basket-item-img" src="img/content/product_one.jpg" alt="Селфи-палка в форме протянутой руки" width="41" height="43"/>
+                      <p class="basket-item-title" >Любительская<br /> селфи-палка</p>
                     </a>
                     <button type="button" class="basket-item-button button">
                       <span class="visually-hidden">Удалить из корзины</span>
                     </button>
                   </li>
                   <li class="basket-item">
-                    <a class="basket-item-link" href="#" tabindex="10">
-                      <img class="basket-item-img" src="img/content/product_two.jpg" alt="Складная селфи-палка с кнопкой" width="41" height="43" tabindex="0" />
+                    <a class="basket-item-link" href="#">
+                      <img class="basket-item-img" src="img/content/product_two.jpg" alt="Складная селфи-палка с кнопкой" width="41" height="43"/>
                       <p class="basket-item-title">Профессиональная селфи-палка</p>
                     </a>
                     <button type="button" class="basket-item-button button">
@@ -289,6 +289,7 @@
       </div>
     </section>
     <section class="rare-order">
+      <h2 class="visually-hidden">Редкие заказы</h2>
       <a class="order-link" href="#">Доставим редкий товар под заказ</a>
     </section>
     <section class="info-contacts">
@@ -393,7 +394,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal-container">
+  <div class="modal-container modal-container-close">
     <div class="modal modal-auth">
       <h2 class="modal-title">Доставка под заказ</h2>
       <button class="modal-close-button" type="submit">
