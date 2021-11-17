@@ -894,6 +894,9 @@ body {
   color: #ffe17f;
   box-shadow: 120px 0px black;
 }
+.tab .tablink-current:focus {
+  color: #af4fff;
+}
 .tab .tablinks::after {
   content: "";
   position: absolute;
