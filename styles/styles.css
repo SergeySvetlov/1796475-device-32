@@ -64,10 +64,18 @@ body {
 }
 .logo {
   display: block;
+  box-sizing: border-box;
   margin-top: 17px;
   margin-left: 60px;
-  margin-bottom: -20px;
-  z-index:1;
+  margin-bottom: -27px;
+  z-index: 1;
+  outline: none;
+  padding: 5px 15px 5px 15px;
+  width: max-content;
+  border-radius: 50px 50px 50px 50px;
+}
+.logo:focus {
+  box-shadow: 0 0 0 5px #af4fff;
 }
 /*Нафигация*/
 .navigation {
@@ -1063,6 +1071,13 @@ body {
   font-weight: 700;
   color: #444444;
 }
+.contacts-phone {
+  outline: none;
+  border-radius: 50px 50px 50px 50px;
+}
+.contacts-phone:focus {
+  box-shadow: 0 0 0 5px #af4fff;
+}
 .contacts-phone:hover {
   color:black;
 }
@@ -1141,6 +1156,7 @@ body {
 }
 .newsletter-form {
   display: flex;
+  align-items: flex-start;
   flex-basis: 100%;
   margin-bottom: 131px;
 }
