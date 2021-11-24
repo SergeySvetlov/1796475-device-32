@@ -4,23 +4,24 @@
   <meta charset="utf-8" />
   <title>Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 </head>
 <body>
   <header class="page-header">
     <a class="logo" href="index.html"><img src="img/icons/device_logo_black.svg" alt="Логотип магазина Девайс" width="145" height="36" /></a>
     <nav class="navigation">
       <div class="navigation-top">
-        <form class="search-bar-form" name="search-bar">
-          <label class="search-bar search-bar-active" tabindex="0">
-            <input class="search-bar-input " type="search" placeholder="Поиск по сайту" />
-          </label>
-          <button class="search-bar-button  search-bar-active" type="submit">Найти</button>
+        <form class="search-bar-form" name="search-bar" tabindex="0">
+          <label class="visually-hidden">Поиск по сайту</label>
+          <input class="search-bar-input" type="search" placeholder="Поиск по сайту" />
+          <button class="search-bar-button" type="submit" tabindex="0">Найти</button>
         </form>
         <ul class="navigation-list">
           <li class="navigation-item-entrance">
             <a class="navigation-link entrance" href="#">Коля Петухов</a>
           </li>
-          <li>
+          <li class="navigation-item-exit">
             <a class="navigation-link exit" href="#">Выйти</a>
           </li>
           <li class="navigation-item-compare">
@@ -88,9 +89,9 @@
             </li>
           </ul>
         </li>
-        <li class="navigation-item-bottom other-bottom"><a class="navigation-item-bottom-link" href="#">Доставка</a></li>
-        <li class="navigation-item-bottom other-bottom"><a class="navigation-item-bottom-link" href="#">Гарантия</a></li>
-        <li class="navigation-item-bottom other-bottom"><a class="navigation-item-bottom-link" href="#">Контакты</a></li>
+        <li class="navigation-item-bottom other-bottom"><a class="navigation-item-bottom-link other-bottom-link" href="#">Доставка</a></li>
+        <li class="navigation-item-bottom other-bottom"><a class="navigation-item-bottom-link other-bottom-link" href="#">Гарантия</a></li>
+        <li class="navigation-item-bottom other-bottom"><a class="navigation-item-bottom-link other-bottom-link" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
