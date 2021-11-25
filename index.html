@@ -13,8 +13,8 @@
     <nav class="navigation">
       <div class="navigation-top">
         <form class="search-bar-form" name="search-bar" tabindex="0">
-          <label class="visually-hidden">Поиск по сайту</label>
-          <input class="search-bar-input" type="search" placeholder="Поиск по сайту" />
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input class="search-bar-input" type="search" placeholder="Поиск по сайту" id="search"/>
           <button class="search-bar-button" type="submit" tabindex="0">Найти</button>
         </form>
         <ul class="navigation-list">
@@ -272,7 +272,7 @@
         <div id="delivery" class="tabcontent delivery">
           <h3 class="subtitle">Доставка</h3>
           <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            Мы с удовольствием доставим ваш товар прямо <br />к вашему подъезду совершенно бесплатно! Ведь<br /> мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </div>
         <div id="warranty" class="tabcontent visually-hidden warranty">
@@ -336,8 +336,8 @@
           Еженедельный дайджест с обзорами новинок,<br /> длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
         </p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="newsletter-email" tabindex="0">
-            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required tabindex="3">
+          <label class="newsletter-email">
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           </label>
           <button class="button newsletter-button" type="submit">
             Подписаться

@@ -141,15 +141,13 @@
                     <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <label class="catalog-filter-label catalog-filter-label-min" tabindex="0">
-                      от <input class="catalog-filter-input" type="number" name="min-price" value="0">
-                    </label>
+                    <label class="catalog-filter-label catalog-filter-label-min" for="min">от </label>
+                    <input class="catalog-filter-input catalog-filter-input-min" type="number" name="min-price" value="0" id="min">
                     <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
-                    <label class="catalog-filter-label catalog-filter-label-max" tabindex="0">
-                      до <input class="catalog-filter-input" type="number" name="max-price" value="5000">
-                    </label>
+                    <label class="catalog-filter-label catalog-filter-label-max" for="max">до </label>
+                    <input class="catalog-filter-input catalog-filter-input-max" type="number" name="max-price" value="5000" tabindex="0" id="max">
                   </div>
                 </div>
               </fieldset>
@@ -242,7 +240,7 @@
                   <div class=""><span class="visually-hidden">Новинка</span></div>
                 </div>
                 <div class="tablinks-position"><a class="tablinks" href="#" tabindex="3">Подробнее</a></div>
-                <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
+                <h3 class="product-card-title">Непотопляемая <br />селфи-палка</h3>
                 <p class="product-card-price">2 500 ₽</p>
               </li>
               <li class="product-card">
@@ -257,13 +255,13 @@
             </ul>
             <button class="button pagination-show-more" type="button">Загрузить ещё</button>
             <ul class="pagination">
-              <li class="pagination-item"><a class="pagination-button" href="#">НАЗАД</a></li>
+              <li class="pagination-item pagination-item-button"><a class="pagination-button" href="#">НАЗАД</a></li>
               <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
               <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
               <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
               <li class="pagination-item"><a class="pagination-link">...</a></li>
               <li class="pagination-item"><a class="pagination-link" href="#">15</a></li>
-              <li class="pagination-item"><a class="pagination-button" href="#">ВПЕРЁД</a></li>
+              <li class="pagination-item pagination-item-button"><a class="pagination-button" href="#">ВПЕРЁД</a></li>
             </ul>
           </div>
         </div>
